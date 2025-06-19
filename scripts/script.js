@@ -1,37 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const date = document.getElementById("date");
-  const menu = document.getElementById("menu");
-  const header = document.getElementById("header");
-  const nav = document.getElementById("nav");
-  const dayNght = document.getElementById("dayNght");
+const menu = document.getElementById("menu");
+const nav = document.querySelector("nav");
+const mode = document.getElementById("mode");
+const header = document.querySelector("header");
 
-  function showDate() {
-    const now = new Date();
-    const day = now.getDate();
-    const month = now.getMonth() + 1; // Ajustar el mes
-    const year = now.getFullYear();
-    date.textContent = `${day}/${month}/${year}`;
-  }
+menu.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
 
-  function toggleDarkMode() {
-    const isSun = dayNght.getAttribute("src") === "assets/sun.svg";
-    dayNght.src = isSun ? "assets/moon.svg" : "assets/sun.svg";
-    document.body.classList.toggle("dark");
-    header.classList.toggle("dark");
-    nav.classList.toggle("dark");
-    nav.classList.toggle("open");
-  }
-
-  function toggleMenu() {
-    nav.classList.toggle("open");
-  }
-
-  // Validación por si algún elemento falta
-  if (date && menu && header && nav && dayNght) {
-    showDate();
-    dayNght.addEventListener("click", toggleDarkMode);
-    menu.addEventListener("click", toggleMenu);
-  } else {
-    console.error("Algunos elementos no fueron encontrados en el DOM.");
-  }
+mode.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  header.classList.toggle("dark");
+  nav.classList.toggle("active");
+  nav.classList.toggle("darNav");
+  mode.src = document.body.classList.contains("dark")
+    ? "assets/sun.svg"
+    : "assets/moon.svg";
 });
