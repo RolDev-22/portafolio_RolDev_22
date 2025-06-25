@@ -333,6 +333,7 @@ main section .boxContent {
   #home .boxContent #content-Tittle {
     width: 40%;
     grid-area: title;
+    font-size: 2em;
   }
 
   #home .boxContent #content-Profile {
@@ -353,6 +354,7 @@ main section .boxContent {
 
   #home .boxContent #content-Description {
     grid-area: description;
+    font-size: 1.5em;
   }
 
   #home .boxContent #content-Description span {
@@ -365,8 +367,13 @@ main section .boxContent {
     justify-content: space-evenly;
   }
 
+  #home .boxContent #content-Buttons button {
+    width: 20%;
+  }
+
   #home .boxContent #content-Buttons a {
-    width: 30%;
+    width: 100%;
+    font-size: 1.2em;
     transition: all 0.3s ease-in-out;
   }
 
