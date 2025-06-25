@@ -55,7 +55,16 @@ li {
 
 .dark {
   background-color: var(--clr8);
-  color: var(--clr4);
+  color: var(--clr1);
+}
+
+.dark a {
+  color: var(--clr9);
+}
+
+.dark .boxContent #content-Tittle span {
+  color: var(--clr10);
+  text-shadow: var(--clr4) 0.1em 0.1em 0.1em;
 }
 
 .darNav {
@@ -74,7 +83,7 @@ header {
   top: 0;
   left: 0;
   min-width: 300px;
-  height: 3em;
+  height: 5em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -91,7 +100,7 @@ header {
 }
 
 header img {
-  width: 2.5em;
+  width: 4em;
   object-fit: fill;
 }
 
@@ -178,38 +187,74 @@ main {
   align-items: center;
 }
 
-main .section {
+main section {
   width: 100%;
   height: 100vh;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+}
+
+main section .boxContent {
+  width: 95%;
+  min-height: calc(100vh - 5em);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.boxContent #content-Profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.boxContent #content-Profile img {
+  width: 70%;
+  object-fit: fill;
+  border-radius: 40%;
+  box-shadow: 1.3em 1.1em 1.4em var(--clr4);
+}
+
+.boxContent #content-Tittle {
+  min-width: 100%;
+  text-align: center;
   font-family: var(--subtittles);
 }
 
-main .boxContent {
-  width: 95%;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.boxContent #content-Tittle span {
+  color: var(--clr4);
+  text-shadow: var(--clr1) 0.1em 0.1em 0.1em;
+}
+
+.boxContent #content-Description {
   text-align: center;
-  gap: 1em;
 }
 
-main .stn-home {
-  justify-content: center;
+.boxContent #content-Buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.2em;
 }
 
-main #home img {
-  width: 12em;
-  border-radius: 45%;
-  object-fit: fill;
-  box-shadow: var(--clr1) 0.2em 0.2em 0.3em;
+.boxContent #content-Buttons a {
+  width: 45%;
+  padding: 1em;
+  text-align: center;
+  font-family: var(--subtittles);
+  font-size: 1.1em;
+  border-radius: 1em;
+  border: 1px inset var(--clr9);
+  background-color: var(--clr1);
 }
 
 @media screen and (min-width: 768px) {
