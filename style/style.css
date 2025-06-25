@@ -307,4 +307,66 @@ main section .boxContent {
     font-size: 1.1em;
     text-shadow: var(--clr9) 0.1em 0.1em 0.1em;
   }
+
+  main section {
+    height: 100vh;
+  }
+
+  #home .boxContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "title title profile"
+      "description description profile"
+      "butons butons profile";
+    justify-content: stretch;
+    align-items: stretch;
+  }
+
+  #home .boxContent #content-Tittle {
+    width: 40%;
+    grid-area: title;
+  }
+
+  #home .boxContent #content-Profile {
+    grid-area: profile;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  #home .boxContent #content-Profile img {
+    width: 80%;
+    object-fit: fill;
+    border-radius: 40%;
+    box-shadow: 1.3em 1.1em 1.4em var(--clr4);
+  }
+
+  #home .boxContent #content-Description {
+    grid-area: description;
+  }
+
+  #home .boxContent #content-Description span {
+    font-size: 1.5em;
+    font-family: var(--subtittles);
+  }
+
+  #home .boxContent #content-Buttons {
+    grid-area: butons;
+    justify-content: space-evenly;
+  }
+
+  #home .boxContent #content-Buttons a {
+    width: 30%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #home .boxContent #content-Buttons a:hover {
+    transform: scale(1.1);
+    font-size: 1.1em;
+    text-shadow: var(--clr9) 0.1em 0.1em 0.1em;
+  }
 }
