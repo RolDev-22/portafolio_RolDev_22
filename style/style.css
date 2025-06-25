@@ -216,7 +216,7 @@ main section .boxContent {
 }
 
 .boxContent #content-Profile img {
-  width: 70%;
+  width: 50%;
   object-fit: fill;
   border-radius: 40%;
   box-shadow: 1.3em 1.1em 1.4em var(--clr4);
@@ -246,15 +246,21 @@ main section .boxContent {
   padding: 0.2em;
 }
 
-.boxContent #content-Buttons a {
-  width: 45%;
-  padding: 1em;
+.boxContent #content-Buttons button {
+  width: clamp(7em, 30%, 15em);
+  height: 2.5em;
+  color: var(--clr4);
+  text-shadow: var(--clr1) 0.1em 0.1em 0.1em;
   text-align: center;
   font-family: var(--subtittles);
   font-size: 1.1em;
-  border-radius: 1em;
+  border-radius: 0.5em;
   border: 1px inset var(--clr9);
   background-color: var(--clr1);
+}
+
+.boxContent #content-Buttons a {
+  padding: 0.4em;
 }
 
 @media screen and (min-width: 768px) {
