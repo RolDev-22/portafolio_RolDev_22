@@ -67,6 +67,14 @@ li {
   text-shadow: var(--clr4) 0.1em 0.1em 0.1em;
 }
 
+.dark .boxContent #content-Buttons button {
+  background-color: #4a8bdf;
+}
+
+.dark #home .boxContent::after {
+  background-image: none;
+}
+
 .darNav {
   background-image: linear-gradient(
     to right,
@@ -287,6 +295,15 @@ main section .boxContent {
 }
 
 @media screen and (min-width: 768px) {
+  .dark #home .boxContent #content-Socials {
+    background-image: linear-gradient(
+      to top,
+      var(--clr8),
+      var(--clr9),
+      var(--clr10)
+    );
+  }
+
   header nav.darNav {
     background-image: none;
   }
