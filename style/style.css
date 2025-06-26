@@ -250,7 +250,7 @@ main section .boxContent {
 
 .boxContent #content-Buttons button {
   width: clamp(7em, 30%, 15em);
-  height: 2.5em;
+  height: 3em;
   color: var(--clr4);
   text-shadow: var(--clr1) 0.1em 0.1em 0.1em;
   text-align: center;
@@ -258,7 +258,7 @@ main section .boxContent {
   font-size: 1.1em;
   border-radius: 0.5em;
   border: 1px inset var(--clr9);
-  background-color: var(--clr1);
+  background-color: var(--clr2);
 }
 
 .boxContent #content-Buttons a {
@@ -353,6 +353,24 @@ main section .boxContent {
       "butons butons profile";
     justify-content: stretch;
     align-items: stretch;
+  }
+
+  #home .boxContent::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20em;
+    width: 60%;
+    height: 110%;
+    background-image: linear-gradient(
+      to top,
+      var(--clr4),
+      var(--clr1),
+      var(--clr2),
+      var(--clr6)
+    );
+    transform: skewX(45deg);
+    z-index: -1;
   }
 
   #home .boxContent #content-Tittle {
