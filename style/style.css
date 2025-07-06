@@ -229,12 +229,12 @@ main section {
 
 main section .boxContent {
   width: 95%;
-  min-height: calc(95vh - 5em);
+  min-height: calc(95vh - 3em);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  row-gap: 0.1em;
+  justify-content: space-around;
+  background-color: red;
 }
 
 .boxContent #content-Tittle {
@@ -265,7 +265,7 @@ main section .boxContent {
 }
 
 .boxContent #content-Description {
-  margin-top: 1em;
+  margin-top: 0.2em;
   text-align: center;
 }
 
