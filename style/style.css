@@ -402,21 +402,6 @@ footer .footer-1 {
   border-bottom: 1px solid var(--clr2);
 }
 
-footer .footer-1 h2 {
-  position: relative;
-}
-
-footer .footer-1 h2::before {
-  content: "";
-  position: absolute;
-  width: 20%;
-  height: 1px;
-  background-color: var(--clr2);
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 footer .footer-1 .socials div {
   display: flex;
   justify-content: center;
@@ -444,6 +429,26 @@ footer .footer-2 a {
 
   .boxContent #content-Description {
     font-size: 1.5em;
+  }
+
+  .contactForm {
+    height: 80vh;
+  }
+
+  #contact .contInput {
+    row-gap: 1.5em;
+  }
+
+  #contact label {
+    font-size: 1.5em;
+  }
+
+  #contact input {
+    height: 5em;
+  }
+
+  #contact textarea {
+    height: 15em;
   }
 }
 
