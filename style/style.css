@@ -229,7 +229,7 @@ main section {
 
 main section .boxContent {
   width: 95%;
-  min-height: calc(100vh - 5em);
+  min-height: calc(95vh - 5em);
   display: flex;
   flex-direction: column;
   align-items: center;
