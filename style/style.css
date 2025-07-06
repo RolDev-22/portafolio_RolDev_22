@@ -219,8 +219,8 @@ main {
 
 main section {
   width: 100%;
-  height: 100vh;
-  min-height: 100vh;
+  height: 95vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -234,7 +234,7 @@ main section .boxContent {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: red;
+  background-color: blue;
 }
 
 .boxContent #content-Tittle {
