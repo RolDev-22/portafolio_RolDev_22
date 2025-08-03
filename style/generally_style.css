@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Rubik+Doodle+Shadow&display=swap");
+
+:root {
+  --font1: "Pixelify Sans", sans-serif;
+  --font2: "Rubik Doodle Shadow", system-ui;
+  --font3: "Montserrat", sans-serif;
+  --maintex: rgba(255, 255, 255, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+body {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 1)
+    ),
+    url("../public/bg_gen.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+header {
+  min-width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  box-shadow: 0 0 1em black;
+  backdrop-filter: blur(5px);
+  border: none;
+  font-family: var(--font1);
+  color: var(--maintex);
+}
+
+header img {
+  object-fit: fill;
+  width: 5em;
+}
+
+header nav {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3em;
+  right: 0;
+  top: 0;
+  padding: 0.5em;
+  font-family: var(--font3);
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 1.5)
+  );
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+header nav ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--maintex);
+}
+
+header nav #mode {
+  object-fit: fill;
+  width: 2em;
+  cursor: pointer;
+}
+
+header button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 3em;
+  height: 2.5em;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+header #menu {
+  position: relative;
+  width: 100%;
+  height: 0.6em;
+  border: 0.15em solid var(--maintex);
+  border-radius: 0.1em;
+  margin-top: -1em;
+}
+
+header #menu::before {
+  content: "";
+  position: absolute;
+  top: 0.6em;
+  right: -0.1em;
+  width: 70%;
+  height: 100%;
+  border: 0.15em solid var(--maintex);
+  border-radius: 0.1em;
+}
+
+header #menu::after {
+  content: "";
+  position: absolute;
+  top: 1.35em;
+  right: -0.1em;
+  width: 50%;
+  height: 100%;
+  border: 0.15em solid var(--maintex);
+  border-radius: 0.1em;
+}

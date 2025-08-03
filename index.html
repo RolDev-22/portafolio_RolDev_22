@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio Rolando Murillo</title>
-    <link rel="icon" href="assets/logopng.png" />
-    <link rel="stylesheet" href="style/style.css" />
-    <script src="scripts/script.js" defer></script>
+    <link rel="icon" href="./public/assets/logopng.png" />
+    <link rel="stylesheet" href="style/generally_style.css" />
+    <script src="scripts/generally_scripts.js" defer></script>
   </head>
-  <body class="resicer">
+  <body>
     <header>
-      <img src="assets/logopng.png" alt="logoWeb" />
+      <img src="./public/assets/logopng.png" alt="logoWeb" />
       <nav>
         <ul>
           <li><a href="#home" class="option-Menu">Inicio</a></li>
@@ -18,88 +18,14 @@
           <li><a href="#projects" class="option-Menu">Proyectos</a></li>
           <li><a href="#contact" class="option-Menu">Contacto</a></li>
         </ul>
-        <img id="mode" src="assets/moon.svg" alt="" />
+        <img id="mode" src="./public/assets/moon.svg" alt="Modo de pagina" />
       </nav>
-      <span class="option-Menu"></span>
+      <button id="btn-menu">
+        <span id="menu"></span>
+      </button>
     </header>
-    <main>
-      <section id="home">
-        <div class="boxContent">
-          <div id="content-Tittle">
-            <h1>¡Hola, Soy <span>Rolando Murillo</span>!</h1>
-          </div>
-          <div id="content-Profile">
-            <img src="assets/prfl.png" alt="profile" />
-          </div>
-          <div id="content-Description">
-            <span>
-              Web Developer, apasionado por la tecnología y la programación. Me
-              encanta crear soluciones digitales que mejoren la vida de las
-              personas.
-            </span>
-          </div>
-          <div id="content-Socials">
-            <a
-              href="https://github.com/RolDev-22"
-              target="_blank"
-              class="social"
-              ><img src="assets/ic-git.svg" alt="" class="iconSos"
-            /></a>
-            <a
-              href="https://www.linkedin.com/in/rolando-murillo-aguirre-fullstack-dev/"
-              target="_blank"
-              class="social"
-              ><img src="assets/ic-link.svg" alt="" class="iconSos"
-            /></a>
-            <a
-              href="https://www.instagram.com/rolox.22/"
-              target="_blank"
-              class="social"
-              ><img src="assets/ic-ins.svg" alt="" class="iconSos"
-            /></a>
-          </div>
-          <div id="content-Buttons">
-            <button role="button">
-              <a download="CV.pdf" href="assets/CV.pdf">Descargar CV</a>
-            </button>
-            <button role="button"><a href="#contact">Contactame</a></button>
-          </div>
-        </div>
-      </section>
-      <section id="about">
-        <div class="boxContent">Hola section</div>
-      </section>
-      <section id="projects">
-        <div class="boxContent">Hola section</div>
-      </section>
-      <section id="contact">
-        <div class="boxContent">
-          <div id="content-Tittle">
-            <h1>Hola ¿<span>En que puedo ayudarte</span>?</h1>
-          </div>
-          <form action="none" method="post" class="contactForm">
-            <div class="contInput">
-              <label>Nombre</label>
-              <input type="text" placeholder="" />
-            </div>
-            <div class="contInput">
-              <label>Asunto</label>
-              <input type="text" placeholder="" />
-            </div>
-            <div class="contInput cont-Mail">
-              <label>Correo</label>
-              <input type="email" placeholder="" />
-            </div>
-            <div class="contInput cont-Message">
-              <label>Mensaje</label>
-              <textarea placeholder=""></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-          </form>
-        </div>
-      </section>
-    </main>
-    <footer>
+    <main></main>
+    <!-- <footer>
       <div class="footer-1">
         <div class="description">
           <h2>Rolando Murillo</h2>
@@ -131,6 +57,6 @@
           <a href="#home">Rolando Murillo</a>
         </p>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>
