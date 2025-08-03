@@ -1,17 +1,17 @@
 const mode = document.getElementById("mode");
 const menu = document.getElementById("btn-menu");
+const optionMenu = document.querySelectorAll(".option-Menu");
+
+optionMenu.forEach((link) => {
+  link.addEventListener("click", () => {
+    const nav = document.querySelector("nav");
+    nav.classList.remove("open");
+  });
+});
 
 menu.addEventListener("click", () => {
   const nav = document.querySelector("nav");
   nav.classList.toggle("open");
-});
-
-mode.addEventListener("click", () => {
-  let imgMode = mode.getAttribute("src");
-
-  imgMode.includes("moon")
-    ? mode.setAttribute("src", "./public/assets/sun.svg")
-    : mode.setAttribute("src", "./public/assets/moon.svg");
 });
 
 window.addEventListener("scroll", () => {
