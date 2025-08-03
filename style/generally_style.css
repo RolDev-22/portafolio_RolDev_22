@@ -34,7 +34,7 @@ body {
       rgba(0, 0, 0, 1)
     ),
     url("../public/bg_gen.jpg");
-  background-size: fill;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -222,10 +222,6 @@ footer .footer-2 a {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    background-size: cover;
-  }
-
   footer .footer-1 {
     justify-content: space-around;
     flex-direction: row;
