@@ -5,7 +5,7 @@
   --font2: "Rubik Doodle Shadow", system-ui;
   --font3: "Montserrat", sans-serif;
   --maintex: rgba(255, 255, 255, 1);
-  --hovercolor: rgb(0, 217, 255);
+  --hovercolor: #0b499a;
 }
 
 * {
@@ -20,18 +20,16 @@
   opacity: 1;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 body {
   background-color: black;
 }
 
 header {
+  position: fixed;
   min-width: 200px;
+  width: 100%;
+  top: 0;
+  left: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -43,11 +41,12 @@ header {
   border: none;
   font-family: var(--font1);
   color: var(--maintex);
+  z-index: 5;
 }
 
 header img {
   object-fit: fill;
-  width: 5em;
+  width: 3em;
 }
 
 header nav {
@@ -65,9 +64,9 @@ header nav {
   font-family: var(--font3);
   background-image: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 1.5)
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 9),
+    rgba(0, 0, 0, 1)
   );
   transform: translateX(-100%);
   opacity: 0;
@@ -144,31 +143,128 @@ header #menu::after {
   border-radius: 0.1em;
 }
 
-.box-container {
+/*Estilado del cuerpo de la página*/
+main {
   width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
-  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  color: var(--maintex);
+}
+
+main .box-container {
+  height: 110vh;
+  width: 100%;
+  min-width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: var(--font2);
-  color: var(--maintex);
-  scroll-margin-top: 7em;
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 1)
-    ),
-    url("../public/bg_gen.webp");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 3)),
+    url("../public/bg_gen.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center;
+  background-attachment: fixed;
 }
 
+main #home .cont {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main #home .cont-img {
+  position: relative;
+  height: 50%;
+  max-width: 250px;
+}
+
+main #home .cont-img::before {
+  content: "";
+  position: absolute;
+  top: 0.8em;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  background-color: black;
+  border: 2px solid var(--hovercolor);
+  opacity: 0.5;
+  z-index: 0;
+  box-shadow: inset 0.5em 0.5em 0.5em var(--hovercolor);
+}
+main #home .cont-img::after {
+  content: "";
+  position: absolute;
+  bottom: 0.8em;
+  right: 0;
+  width: 80%;
+  height: 80%;
+  background-color: black;
+  border: 2px solid var(--hovercolor);
+  opacity: 0.5;
+  z-index: 0;
+  box-shadow: inset -0.5em -0.5em 0.5em var(--hovercolor);
+}
+
+main #home .cont-img img {
+  width: 80%;
+  height: 80%;
+  max-width: 200px;
+  object-fit: fill;
+  z-index: 1;
+}
+
+main #home .cont-info {
+  height: 30%;
+  row-gap: 0.7em;
+  justify-content: flex-start;
+}
+
+main #home .cont-info h1 {
+  font-size: 1.4em;
+  font-family: var(--font2);
+}
+
+main #home .cont-info h1 strong {
+  color: var(--hovercolor);
+}
+
+main #home .cont-info h2 {
+  font-size: 1em;
+  font-family: var(--font3);
+}
+
+main #home .cont-info #cv {
+  text-decoration: none;
+  color: var(--maintex);
+  font-family: var(--font1);
+  font-size: 1em;
+  padding: 0.5em;
+  border: 0.1em inset var(--maintex);
+  border-radius: 0.2em;
+  background-color: var(--hovercolor);
+  transition: all 0.5s ease-in-out;
+}
+
+main #home .cont-info .socials {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1em;
+}
+
+main #home .cont-info .socials a {
+  width: 30px;
+  height: 30px;
+}
+
+/*Estilado del FOOTER*/
 footer {
   width: 100%;
   bottom: 0;
@@ -285,5 +381,14 @@ footer .footer-2 a {
 
   header nav #mode:hover {
     transform: scale(1.1);
+  }
+
+  main .box-container {
+    flex-direction: row;
+  }
+
+  main #home .cont {
+    width: 60%;
+    background-color: red;
   }
 }

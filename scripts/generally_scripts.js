@@ -13,8 +13,3 @@ menu.addEventListener("click", () => {
   const nav = document.querySelector("nav");
   nav.classList.toggle("open");
 });
-
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  header.classList.toggle("sticky", window.scrollY > 0);
-});
