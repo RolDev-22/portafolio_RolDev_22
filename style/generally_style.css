@@ -312,7 +312,7 @@ main #Section-home {
   }
 
   #Section-home .ImgHome {
-    top: 1.5em;
+    top: 0.5em;
   }
 
   #Section-home .boxDescription {
@@ -320,6 +320,18 @@ main #Section-home {
     height: 100%;
     width: 60%;
     gap: 0.5em;
+  }
+
+  #Section-home .boxTextDescription h2 {
+    font-size: 1.5em;
+  }
+
+  #Section-home .boxTextDescription h1 {
+    font-size: 2em;
+  }
+
+  #Section-home .boxTextDescription h3 {
+    font-size: 1em;
   }
 
   #Section-home .boxSocials {
