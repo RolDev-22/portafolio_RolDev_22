@@ -10,75 +10,78 @@
   </head>
   <body>
     <header>
-      <img src="./public/assets/logopng.png" alt="logoWeb" />
+      <a href="#home"
+        ><img src="./public/assets/logopng.png" alt="Logo" class="logoImg"
+      /></a>
+      <h2 class="logoTxt"><span>R</span>olDev-22</h2>
       <nav>
         <ul>
-          <li><a href="#home" class="option-Menu">Inicio</a></li>
-          <li><a href="#about" class="option-Menu">Sobre Mi</a></li>
-          <li><a href="#projects" class="option-Menu">Proyectos</a></li>
-          <li><a href="#contact" class="option-Menu">Contacto</a></li>
+          <li><a class="optionsMenu" href="#home">Inicio</a></li>
+          <li><a class="optionsMenu" href="#about">Sobre mi</a></li>
+          <li><a class="optionsMenu" href="#projects">Proyectos</a></li>
+          <li><a class="optionsMenu" href="#contact">Contacto</a></li>
         </ul>
-        <!-- <img id="mode" src="./public/assets/moon.svg" alt="Modo de pagina" /> -->
       </nav>
-      <button id="btn-menu">
-        <span id="menu"></span>
+      <button id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </button>
     </header>
     <main>
-      <section>
-        <div class="boxContainer">
-          <h2>Hola INICIO</h2>
+      <section id="home">
+        <div class="containerHome">
+          <div class="boxImgHome">
+            <img src="./public/assets/pfl_pd1.JPG" alt="Logo" class="homeImg" />
+          </div>
+          <div class="boxDescriptionHome">
+            <h1 class="homeTitle">Rolando Murillo</h1>
+            <h3 class="homeDescription">Front End Developer</h3>
+            <div class="btnsDescription">
+              <a href="#contact" class="btnDescrip">Contactame</a>
+              <a
+                descargar
+                href="./public/cv.pdf"
+                target="_blank"
+                class="btnDescrip"
+                >CV Online</a
+              >
+            </div>
+            <div class="boxSocials">
+              <a href="https://github.com/RolDev-22" target="_blank"
+                ><img
+                  src="./public/assets/ic-git.svg"
+                  alt="Logo"
+                  class="socialImg"
+              /></a>
+              <a
+                href="https://www.linkedin.com/in/rolandomurillo/"
+                target="_blank"
+                ><img
+                  src="./public/assets/ic-link.svg"
+                  alt="Logo"
+                  class="socialImg"
+              /></a>
+            </div>
+          </div>
         </div>
       </section>
-      <section>
-        <div class="boxContainer">
-          <h2>Hola SOBRE MI</h2>
+
+      <section id="about">
+        <div class="container">
+          <h2>Hola About</h2>
         </div>
       </section>
-      <section>
-        <div class="boxContainer">
-          <h2>Hola PROYECTOS</h2>
+      <section id="projects">
+        <div class="container">
+          <h2>Hola Projects</h2>
         </div>
       </section>
-      <section>
-        <div class="boxContainer">
-          <h2>Hola CONTACTO</h2>
+      <section id="contact">
+        <div class="container">
+          <h2>Hola Contact</h2>
         </div>
       </section>
     </main>
-    <footer>
-      <div class="footer-1">
-        <div class="description combinationstyle">
-          <h2>Rolando Murillo</h2>
-          <p>
-            Front End Developer enfocado en paginas web con diseños modernos y
-            atractivos. Con una pasion por la tecnologia y la programacion.
-          </p>
-        </div>
-        <div class="socials combinationstyle">
-          <h3>Redes Sociales</h3>
-
-          <div>
-            <a href="https://github.com/RolDev-22" target="_blank"
-              ><img src="./public/assets/ic-git.svg" alt="" class="iconSos"
-            /></a>
-            <a
-              href="https://www.linkedin.com/in/rolando-murillo-aguirre-fullstack-dev/"
-              target="_blank"
-              ><img src="./public/assets/ic-link.svg" alt="" class="iconSos"
-            /></a>
-            <a href="https://www.instagram.com/rolox.22/" target="_blank"
-              ><img src="./public/assets/ic-ins.svg" alt="" class="iconSos"
-            /></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-2">
-        <p>
-          © Copyright 2025. Todos los derechos reservados
-          <a href="#home">Rolando Murillo</a>
-        </p>
-      </div>
-    </footer>
   </body>
 </html>

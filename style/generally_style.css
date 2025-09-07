@@ -1,11 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=Rubik+Doodle+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Fascinate&family=Londrina+Outline&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Rubik+Doodle+Shadow&display=swap");
 
 :root {
-  --font1: "Pixelify Sans", sans-serif;
-  --font2: "Rubik Doodle Shadow", system-ui;
-  --font3: "Montserrat", sans-serif;
-  --maintex: rgba(255, 255, 255, 1);
-  --hovercolor: #0b499a;
+  --font1: "Montserrat", sans-serif;
+  --font2: "Orbitron", sans-serif;
+  --font3: "Agbalumo", cursive;
+  --font4: "Londrina Outline", cursive;
+  --font5: "Fascinate", cursive;
+  --font6: "Rubik Doodle Shadow", cursive;
+
+  --color1: #071739;
+  --color2: #4b6382;
+  --color3: #a4b5c4;
+  --color4: #cdd5db;
+  --color5: #a68868;
+  --color6: #e3c39d;
+  --color7: #c27920;
+}
+
+nav.active {
+  width: 100dvw;
+  height: 100dvh;
+  opacity: 1;
+  right: -10px;
 }
 
 * {
@@ -13,4 +29,239 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  min-width: 300px;
+  position: fixed;
+  height: 4em;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  border-bottom-left-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(17.2px);
+  -webkit-backdrop-filter: blur(17.2px);
+  box-shadow: var(--color5) 0px 3px 5px;
+  z-index: 2;
+}
+
+.logoImg {
+  width: 4em;
+  height: 4em;
+}
+
+.logoTxt {
+  display: none;
+  font-family: var(--font2);
+  color: var(--color7);
+  padding: 0.5em;
+  background-color: blue;
+}
+
+.logo span {
+  color: var(--color3);
+}
+
+nav {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  top: 0;
+  right: 0;
+  padding: 0.2em;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 3em;
+}
+
+nav ul a {
+  text-decoration: none;
+  font-family: var(--font1);
+  color: var(--color6);
+  font-size: 1.5rem;
+  padding: 0.6em;
+}
+
+header button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 3em;
+  height: 3.5em;
+  border-radius: 0.3em;
+  border: 1px outset var(--color7);
+  background-color: transparent;
+  z-index: 5;
+}
+
+header button span {
+  display: flex;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 0.2em;
+  background-color: var(--color7);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main section {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color4);
+  background-color: black;
+}
+
+main #home {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("../public/bg_gen.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main .containerHome {
+  width: 100%;
+  height: 80dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 0.5em;
+}
+
+main .boxImgHome {
+  width: 70%;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: -60px;
+  animation: up-down 2s ease-in-out infinite alternate-reverse backwards;
+}
+
+main .homeImg {
+  position: relative;
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  box-shadow: var(--color6) 0px -5px 15px;
+  border: 1px solid var(--color6);
+}
+
+main .boxImgHome::after {
+  content: "";
+  position: absolute;
+  width: clamp(250px, 100px, 300px);
+  height: 150px;
+  bottom: -50px;
+  z-index: -1;
+  background-color: #c27920;
+  box-shadow: var(--color6) 0px 15px 15px;
+  clip-path: polygon(0 0, 50% 32%, 100% 0, 100% 60%, 51% 100%, 0 60%);
+  border: 5px solid var(--color6);
+}
+
+main .boxDescriptionHome {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font1);
+  color: var(--color6);
+}
+
+main .btnsDescription {
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+main .btnsDescription .btnDescrip {
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.8em;
+  border-radius: 0.5em;
+  background-color: var(--color1);
+  color: var(--color5);
+  font-family: var(--font1);
+}
+
+main .boxSocials {
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  background-color: green;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
 }
