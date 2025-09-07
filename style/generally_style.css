@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Fascinate&family=Londrina+Outline&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Rubik+Doodle+Shadow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Bungee&family=Erica+One&family=Fascinate&family=Londrina+Outline&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Rubik+Doodle+Shadow&display=swap");
 
 :root {
   --font1: "Montserrat", sans-serif;
@@ -7,6 +7,8 @@
   --font4: "Londrina Outline", cursive;
   --font5: "Fascinate", cursive;
   --font6: "Rubik Doodle Shadow", cursive;
+  --font7: "Bungee", cursive;
+  --font8: "Erica One", cursive;
 
   --color1: #071739;
   --color2: #4b6382;
@@ -16,7 +18,7 @@
   --color6: #e3c39d;
   --color7: #c27920;
 }
-
+/*FUNCIONES CON JS*/
 nav.active {
   width: 100dvw;
   height: 100dvh;
@@ -24,6 +26,7 @@ nav.active {
   right: -10px;
 }
 
+/*Ajustes generales*/
 * {
   margin: 0;
   padding: 0;
@@ -60,23 +63,6 @@ header {
   z-index: 2;
 }
 
-.logoImg {
-  width: 4em;
-  height: 4em;
-}
-
-.logoTxt {
-  display: none;
-  font-family: var(--font2);
-  color: var(--color7);
-  padding: 0.5em;
-  background-color: blue;
-}
-
-.logo span {
-  color: var(--color3);
-}
-
 nav {
   position: absolute;
   width: 0%;
@@ -88,49 +74,9 @@ nav {
   transition: all 0.5s ease-in-out;
   background-image: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9),
     rgba(0, 0, 0, 0.9)
   );
-}
-
-nav ul {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  gap: 3em;
-}
-
-nav ul a {
-  text-decoration: none;
-  font-family: var(--font1);
-  color: var(--color6);
-  font-size: 1.5rem;
-  padding: 0.6em;
-}
-
-header button {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 3em;
-  height: 3.5em;
-  border-radius: 0.3em;
-  border: 1px outset var(--color7);
-  background-color: transparent;
-  z-index: 5;
-}
-
-header button span {
-  display: flex;
-  width: 0.6em;
-  height: 0.6em;
-  border-radius: 0.2em;
-  background-color: var(--color7);
 }
 
 main {
@@ -152,7 +98,69 @@ main section {
   background-color: black;
 }
 
-main #home {
+/*Logo de la pagina*/
+header .logoImg {
+  width: 4em;
+  height: 4em;
+}
+
+/*Logo de la pagina texto*/
+header .logoTxt {
+  display: none;
+  font-family: var(--font2);
+  color: var(--color7);
+  padding: 0.5em;
+  background-color: blue;
+}
+
+header .logo span {
+  color: var(--color3);
+}
+
+/*Ajustes del menu de opciones*/
+nav ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 3em;
+}
+
+nav ul a {
+  text-decoration: none;
+  font-family: var(--font1);
+  color: var(--color6);
+  font-size: 1.5rem;
+  padding: 0.6em;
+}
+
+/*Ajustes del btn hamburguer del menu*/
+header button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 3em;
+  height: 3.5em;
+  border-radius: 0.3em;
+  border: 1px outset var(--color7);
+  background-color: transparent;
+  z-index: 5;
+}
+
+header button span {
+  display: flex;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 0.2em;
+  background-color: var(--color7);
+}
+
+/*Ajustes de la seccion de inicio*/
+main #Section-home {
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.7),
@@ -164,17 +172,18 @@ main #home {
   background-repeat: no-repeat;
 }
 
-main .containerHome {
+#Section-home .containerHome {
+  box-sizing: border-box;
   width: 100%;
-  height: 80dvh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
-  gap: 0.5em;
+  gap: 2em;
 }
 
-main .boxImgHome {
+#Section-home .boxImgHome {
   width: 70%;
   height: auto;
   position: relative;
@@ -182,11 +191,10 @@ main .boxImgHome {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: -60px;
   animation: up-down 2s ease-in-out infinite alternate-reverse backwards;
 }
 
-main .homeImg {
+#Section-home .homeImg {
   position: relative;
   width: 12em;
   height: 12em;
@@ -195,7 +203,7 @@ main .homeImg {
   border: 1px solid var(--color6);
 }
 
-main .boxImgHome::after {
+#Section-home .boxImgHome::after {
   content: "";
   position: absolute;
   width: clamp(250px, 100px, 300px);
@@ -208,18 +216,42 @@ main .boxImgHome::after {
   border: 5px solid var(--color6);
 }
 
-main .boxDescriptionHome {
+#Section-home .boxDescriptionHome {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5em;
+  gap: 2em;
   font-family: var(--font1);
   color: var(--color6);
+  padding-top: 15px;
 }
 
-main .btnsDescription {
+#Section-home .textDescription {
+  width: 90%;
+}
+
+#Section-home .textDescription h2 {
+  font-size: 2.5em;
+  font-family: var(--font1);
+  font-weight: 300;
+}
+
+#Section-home .textDescription h1 {
+  font-size: 4em;
+  font-family: var(--font8);
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+#Section-home .textDescription h3 {
+  font-size: 1.5em;
+  font-family: var(--font1);
+  font-weight: 200;
+}
+
+#Section-home .btnsDescription {
   width: 95%;
   height: auto;
   display: flex;
@@ -229,8 +261,8 @@ main .btnsDescription {
   gap: 2em;
 }
 
-main .btnsDescription .btnDescrip {
-  width: 50%;
+#Section-home .btnsDescription .btnDescrip {
+  width: clamp(200px, 100px, 300px);
   text-align: center;
   text-decoration: none;
   padding: 0.8em;
@@ -240,7 +272,7 @@ main .btnsDescription .btnDescrip {
   font-family: var(--font1);
 }
 
-main .boxSocials {
+#Section-home .boxSocials {
   width: 95%;
   height: auto;
   display: flex;
@@ -248,7 +280,94 @@ main .boxSocials {
   justify-content: center;
   align-items: center;
   gap: 2em;
-  background-color: green;
+  padding: 0.5em;
+}
+
+#Section-home a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+}
+
+#Section-home .socialImg {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+#Section-home .boxSocials a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0px;
+  border-bottom: 2px solid var(--color6);
+  box-shadow: var(--color7) 0px 3px 5px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 968px) and (orientation: landscape) {
+  #Section-home .containerHome {
+    margin-top: 0;
+    gap: 0;
+    justify-content: end;
+  }
+
+  #Section-home .homeImg {
+    top: 4em;
+    width: 6em;
+    height: 6em;
+  }
+
+  #Section-home .boxImgHome::after {
+    width: clamp(150px, 100px, 200px);
+    height: 100px;
+    bottom: -90px;
+    clip-path: polygon(0 0, 50% 32%, 100% 0, 100% 60%, 51% 100%, 0 60%);
+  }
+
+  #Section-home .boxDescriptionHome {
+    margin-top: 0;
+    gap: 0;
+  }
+
+  #Section-home .boxDescriptionHome {
+    margin-top: 0;
+    gap: 0;
+  }
+
+  #Section-home .textDescription h2,
+  #Section-home .textDescription h3 {
+    font-size: 1.5em;
+  }
+
+  #Section-home .textDescription h1 {
+    font-size: 3em;
+  }
+
+  #Section-home .btnsDescription {
+    justify-content: space-evenly;
+  }
+
+  #Section-home .btnsDescription .btnDescrip {
+    width: clamp(250px, 150px, 300px);
+  }
+
+  #Section-home .textDescription {
+    width: 65%;
+  }
+
+  #Section-home .boxSocials {
+    padding: 0.3em;
+    justify-content: space-evenly;
+  }
+
+  #Section-home .socialImg {
+    width: 2em;
+    height: 2em;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -257,6 +376,7 @@ main .boxSocials {
 @media screen and (min-width: 1024px) {
 }
 
+/*ANIMACIONES DE LAS SECCIONES*/
 @keyframes up-down {
   0% {
     transform: translateY(5px);
