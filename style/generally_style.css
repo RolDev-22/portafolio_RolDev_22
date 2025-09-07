@@ -310,7 +310,7 @@ main #Section-home {
 }
 
 /*RESPONSIVE PARA TELEFONOS PEQUEÑOS Y EN HORIZONTAL*/
-@media only screen and (max-width: 968px) and (max-height: 420px) and (orientation: landscape) {
+@media only screen and (max-width: 968px) and (max-height: 520px) and (orientation: landscape) {
   #Section-home .containerHome {
     justify-content: flex-end;
     flex-direction: row;
