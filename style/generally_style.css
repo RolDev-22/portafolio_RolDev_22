@@ -247,7 +247,7 @@ main #Section-home {
   gap: 2em;
 }
 
-#Section-home .boxBtn .btnDescrip {
+.btnDescrip {
   width: clamp(200px, 100px, 300px);
   text-align: center;
   text-decoration: none;
@@ -299,7 +299,6 @@ main #Section-home {
 /*Ajustes de la seccion de about*/
 #Section-about {
   justify-content: end;
-  background-color: green;
 }
 
 #Section-about .containerAbout {
@@ -321,7 +320,6 @@ main #Section-home {
   align-items: flex-start;
   gap: 0.5em;
   padding: 0.5em;
-  background-color: red;
 }
 
 #Section-about .boxInformation h2 {
@@ -408,7 +406,6 @@ main #Section-home {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: yellow;
 }
 
 #Section-about .boxPicture img {
@@ -483,6 +480,28 @@ main #Section-home {
   #Section-home .boxSocials {
     gap: 1em;
     padding: 0.3em;
+  }
+
+  #Section-about .containerAbout {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #Section-about .boxInformation {
+    height: 100%;
+    width: 50%;
+    justify-content: flex-end;
+  }
+
+  #Section-about .boxPicture {
+    height: 100%;
+    width: 35%;
+    justify-content: flex-end;
+  }
+
+  #Section-about .boxPicture img {
+    width: 80%;
+    height: 90%;
   }
 }
 
@@ -583,7 +602,7 @@ main #Section-home {
     margin-top: 1em;
   }
 
-  #Section-home .boxBtn .btnDescrip {
+  .btnDescrip {
     width: clamp(250px, 300px, 500px);
     height: 2.5em;
     justify-content: center;
@@ -596,7 +615,7 @@ main #Section-home {
     color: var(--color4);
   }
 
-  #Section-home .boxBtn .btnDescrip:hover {
+  .btnDescrip:hover {
     transform: scale(0.9);
     border: 2px outset var(--color6);
   }
@@ -611,6 +630,53 @@ main #Section-home {
   #Section-home .boxSocials img {
     width: 3.5em;
     height: 3.5em;
+  }
+
+  #Section-about .containerAbout {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #Section-about .boxInformation {
+    height: 100%;
+    width: 60%;
+    justify-content: center;
+    row-gap: 2.5em;
+  }
+
+  #Section-about .boxInformation h2 {
+    font-size: 2.5em;
+  }
+
+  #Section-about .boxInformation a {
+    font-size: 1.2em;
+  }
+
+  #Section-about .boxInformation p {
+    font-size: 1em;
+  }
+
+  #Section-about .boxPicture {
+    height: 100%;
+    width: 40%;
+    justify-content: flex-end;
+  }
+
+  #Section-about .boxPicture img {
+    width: 95%;
+    height: 100%;
+  }
+
+  #Section-about .boxAddress {
+    justify-content: center;
+    row-gap: 2em;
+  }
+  #Section-about .boxAddress a {
+    width: 60%;
+    height: 3em;
+    font-size: 5em;
+    font-family: var(--font1);
+    font-size: 1em;
   }
 }
 
@@ -681,5 +747,13 @@ main #Section-home {
 
   #Section-home .boxSocials a:hover::before {
     transform: translateY(70px);
+  }
+
+  #Section-about .boxInformation {
+    width: 50%;
+  }
+
+  #Section-about .boxPicture {
+    width: 30%;
   }
 }
