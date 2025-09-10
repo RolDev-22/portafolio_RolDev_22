@@ -7,8 +7,8 @@ btnMenu.addEventListener("click", () => {
 });
 
 optionsMenu.forEach((option) => {
-  const nav = document.querySelector("nav");
-
-  // Luego se la agregamos solo al que se presionó
-  nav.classList.remove("active");
+  option.addEventListener("click", () => {
+    const nav = document.querySelector("nav");
+    nav.classList.remove("active");
+  });
 });
