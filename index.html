@@ -1,157 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio Rolando Murillo</title>
-    <link rel="icon" href="./public/assets/logopng.png" />
-    <link rel="stylesheet" href="style/generally_style.css" />
-    <script src="scripts/generally_scripts.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <a href="#Section-home"
-        ><img src="./public/assets/logopng.png" alt="Logo" class="logoImg"
-      /></a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Rolando Murillo</title>
+  <link rel="icon" href="./public/assets/logopng.png" />
+  <link rel="stylesheet" href="style/generally_style.css" />
+  <script src="scripts/generally_scripts.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <a href="#Section-home"><img src="./public/assets/logopng.png" alt="Logo" class="logoImg" /></a>
+    <a href="#Section-home" class="logoTxt"><span>R</span>olDev-22</a>
+    <nav>
+      <ul>
+        <li><a class="optionsMenu" href="#Section-home">Inicio</a></li>
+        <li><a class="optionsMenu" href="#Section-about">Sobre mi</a></li>
+        <li><a class="optionsMenu" href="#projects">Proyectos</a></li>
+        <li><a class="optionsMenu" href="#services">Servicios</a></li>
+        <li><a class="optionsMenu" href="#Section-contact">Contacto</a></li>
+      </ul>
+    </nav>
+    <button id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+  <main>
+    <!-- Sección de home para presentación general -->
+    <section id="Section-home">
+      <article class="containerHome">
+        <div class="boxImgHome">
+          <img src="./public/assets/pfl_pd1.JPG" alt="Logo" class="ImgHome" />
+        </div>
+        <div class="boxDescription">
+          <div class="boxTextDescription">
+            <h2>Rolando</h2>
+            <h1>Murillo</h1>
+            <h3>Front End Developer</h3>
+          </div>
+          <div class="boxBtn">
+            <a href="#contact" class="btnLink">Contactame</a>
+            <a href="public/cv.pdf" download="CV_Rolando Murillo.pdf" class="btnLink">CV Online</a>
+          </div>
+          <div class="boxSocials">
+            <a href="https://github.com/RolDev-22" target="_blank"><img src="./public/assets/ic-git.svg" alt="Logo" />
+              <span class="textDescription-Socials">Gitbub</span></a>
+
+            <a href="https://www.linkedin.com/in/rolando-ma/" target="_blank"><img src="./public/assets/ic-link.svg"
+                alt="Logo" />
+              <span class="textDescription-Socials">Linkedin</span></a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <!-- Sección de sobre mi para presentación personal -->
+    <section id="Section-about">
+      <article class="container containerAbout">
+        <div class="boxInformation">
+          <div class="Div-tittle">
+            <h2 class="h2Title">Sobre mi</h2>
+            <a mailto="rolandomurilloaguirre22@gmail.com" href="mailto:rolandomurilloaguirre22@gmail.com"
+              class="linkMail">
+              <img src="./public/assets/icv-mail.svg" alt="logo correo" />
+              rolandomurilloaguirre22@gmail.com</a>
+          </div>
+          <p>
+            Soy Rolando Murillo, Front End Developer de 26 años, egresado de
+            la Universidad de Costa Rica en la carrera de Informática
+            Empresarial. Cuento con experiencia en el desarrollo y mejora de
+            sitios web, incluyendo mi práctica profesional optimizando la
+            página de la Municipalidad de Osa. Mi objetivo es seguir
+            fortaleciendo mis habilidades en programación y desarrollo web,
+            aportando soluciones creativas y funcionales.
+          </p>
+          <div class="boxAddress">
+            <p>Puerto Cortes</p>
+            <p class="pdecoration">Osa,Puntarenas</p>
+            <a href="#contact" class="btnLink">Contactame</a>
+          </div>
+        </div>
+        <div class="boxPicture">
+          <img src="./public/assets/pfl_pd2.JPG" alt="picture-Rolando" />
+        </div>
+      </article>
+    </section>
+
+    <!-- Sección de proyectos -->
+    <section id="projects">
+      <article class="container containerProjects">
+        <h2>Hola Projects</h2>
+      </article>
+    </section>
+    <section id="services">
+      <article class="container containerServices">
+        <h2>Hola Services</h2>
+      </article>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="Section-contact">
+      <article class="container containerContact">
+        <div class="Div-tittle boxTitle">
+          <h2 class="h2Title">Contactame</h2>
+        </div>
+        <div class="boxDescription">
+          <p>Será un gusto poder colaborar contigo ó bien si deseas solicitar información, no dudes en contactarme</p>
+          <img src="./public/ctt1.png" alt="imagen contacto">
+        </div>
+        <div class="boxForm">
+          <form action="https://formsubmit.co/rolandomurilloaguirre22@gmail.com" method="POST">
+            <div class="contentInput">
+              <input type="text" name="name" required class="commonStyleInput inputStyle">
+              <label class="labelStyle" for="name">Nombre</label>
+            </div>
+            <div class="contentInput">
+              <input type="email" name="email" required class="commonStyleInput inputStyle">
+              <label class="labelStyle" for="email">Correo</label>
+            </div>
+            <div class="contentInput">
+              <input type="text" name="affair" required class="commonStyleInput inputStyle">
+              <label class="labelStyle" for="affair">Asunto</label>
+            </div>
+            <div class="contentInput">
+              <textarea name="message" placeholder="Escribe tu mensaje" required class="commonStyleInput "></textarea>
+            </div>
+            <button type="submit" class="btnLink">Enviar</button>
+          </form>
+        </div>
+
+
+        </div>
+    </section>
+  </main>
+  <footer>
+    <div class="boxLogo">
+      <img src="./public/assets/logopng.png" alt="logo web">
       <a href="#Section-home" class="logoTxt"><span>R</span>olDev-22</a>
-      <nav>
-        <ul>
-          <li><a class="optionsMenu" href="#Section-home">Inicio</a></li>
-          <li><a class="optionsMenu" href="#Section-about">Sobre mi</a></li>
-          <li><a class="optionsMenu" href="#projects">Proyectos</a></li>
-          <li><a class="optionsMenu" href="#services">Servicios</a></li>
-          <li><a class="optionsMenu" href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
-      <button id="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-    </header>
-    <main>
-      <!-- Sección de home para presentación general -->
-      <section id="Section-home">
-        <div class="containerHome">
-          <div class="boxImgHome">
-            <img src="./public/assets/pfl_pd1.JPG" alt="Logo" class="ImgHome" />
-          </div>
-          <div class="boxDescription">
-            <div class="boxTextDescription">
-              <h2>Rolando</h2>
-              <h1>Murillo</h1>
-              <h3>Front End Developer</h3>
-            </div>
-            <div class="boxBtn">
-              <a href="#contact" class="btnLink">Contactame</a>
-              <a
-                descargar
-                href="./public/cv.pdf"
-                target="_blank"
-                class="btnLink"
-                >CV Online</a
-              >
-            </div>
-            <div class="boxSocials">
-              <a href="https://github.com/RolDev-22" target="_blank"
-                ><img src="./public/assets/ic-git.svg" alt="Logo" />
-                <span class="textDescription-Socials">Gitbub</span></a
-              >
+    </div>
+    <div class="boxInformacion">
+      <h2>Rolando Murillo</h2>
+      <h3>Desarrollador Web</h3>
+      <a href="mailto:rolandomurilloaguirre22@gmail.com">
+        <img src="./public/assets/icv-mail.svg" alt="">
+        rolandomurilloaguirre22@gmail.com
+      </a>
+    </div>
+    <div class="boxRedes">
+      <h3>Sigueme</h3>
+      <div class="boxIcons">
+        <a href="https://github.com/RolDev-22" target="_blank"><img src="./public/assets/icv_git.svg" alt="Logo" /></a>
+        <a href="https://www.linkedin.com/in/rolando-ma/" target="_blank"><img src="./public/assets/icv_link.svg"
+            alt="Logo" /></a>
+        <a href="https://www.instagram.com/rolox.22/" target="_blank"><img src="./public/assets/icv_inst.svg"
+            alt="Logo" /></a>
+      </div>
+    </div>
 
-              <a href="https://www.linkedin.com/in/rolando-ma/" target="_blank"
-                ><img src="./public/assets/ic-link.svg" alt="Logo" />
-                <span class="textDescription-Socials">Linkedin</span></a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Sección de sobre mi para presentación personal -->
-      <section id="Section-about">
-        <div class="containerAbout">
-          <div class="boxInformation">
-            <div class="tittle">
-              <h2>Sobre mi</h2>
-              <a
-                mailto="rolandomurilloaguirre22@gmail.com"
-                href="mailto:rolandomurilloaguirre22@gmail.com"
-                class="linkMail"
-              >
-                <img src="./public/assets/icv-mail.svg" alt="logo correo" />
-                rolandomurilloaguirre22@gmail.com</a
-              >
-            </div>
-            <p>
-              Soy Rolando Murillo, Front End Developer de 26 años, egresado de
-              la Universidad de Costa Rica en la carrera de Informática
-              Empresarial. Cuento con experiencia en el desarrollo y mejora de
-              sitios web, incluyendo mi práctica profesional optimizando la
-              página de la Municipalidad de Osa. Mi objetivo es seguir
-              fortaleciendo mis habilidades en programación y desarrollo web,
-              aportando soluciones creativas y funcionales.
-            </p>
-            <div class="boxAddress">
-              <p>Puerto Cortes</p>
-              <p class="pdecoration">Osa,Puntarenas</p>
-              <a href="#contact" class="btnLink">Contactame</a>
-            </div>
-          </div>
-          <div class="boxPicture">
-            <img src="./public/assets/pfl_pd2.JPG" alt="picture-Rolando" />
-          </div>
-        </div>
-      </section>
+    <p class="copyright">© 2025 Rolando Murillo, Todos los derechos reservados</p>
+  </footer>
+</body>
 
-      <!-- Sección de proyectos -->
-      <section id="projects">
-        <div class="container">
-          <h2>Hola Projects</h2>
-        </div>
-      </section>
-      <section id="services">
-        <div class="container">
-          <h2>Hola Services</h2>
-        </div>
-      </section>
-      <section id="contact">
-        <div class="container">
-          <h2>Hola Contact</h2>
-        </div>
-      </section>
-    </main>
-    <footer>
-      
-        <div class="boxLogo">
-          <img src="./public/assets/logopng.png" alt="logo web">
-          <a href="#Section-home" class="logoTxt"><span>R</span>olDev-22</a>
-        </div>
-        <div class="boxInformacion">
-          <h2>Rolando Murillo</h2>
-          <h3>Desarrollador Web</h3>
-          <a href="mailto:rolandomurilloaguirre22@gmail.com">
-            <img src="./public/assets/icv-mail.svg" alt="">
-            rolandomurilloaguirre22@gmail.com
-          </a>
-        </div>
-        <div class="boxRedes">
-          <h3>Sigueme</h3>
-          <div class="boxIcons">
-          <a href="https://github.com/RolDev-22" target="_blank" ><img
-            src="./public/assets/icv_git.svg"
-            alt="Logo"
-          />
-          
-          <a href="https://www.linkedin.com/in/rolando-ma/" target="_blank"
-            ><img src="./public/assets/icv_link.svg" alt="Logo" />
-          </a>
-         
-          <a href="https://www.instagram.com/rolox.22/" target="_blank"
-            ><img src="./public/assets/icv_inst.svg" alt="Logo" />
-          </a>
-          </div>
-        </div>
-     
-      <p class="copyright">© 2025 Rolando Murillo, Todos los derechos reservados</p>
-    </footer>
-  </body>
 </html>
