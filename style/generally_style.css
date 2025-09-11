@@ -29,7 +29,7 @@ nav.active {
 /*****CLASES DE USO COMÚN*/
 
 .activeLabel {
-  transform: translateY(-2.5em);
+  transform: translateY(-2.2em);
 }
 
 /**estilo compartido de los inputs del form*/
@@ -513,6 +513,7 @@ main #Section-contact {
 
 #Section-contact .boxForm {
   width: 90%;
+  height: auto;
   padding: 0.5em;
   border: 1px outset var(--color6);
   border-radius: 0.5em;
@@ -556,12 +557,12 @@ main #Section-contact {
 }
 
 #Section-contact .contentInput input {
-  height: 2.5em;
+  height: 3em;
 }
 
 #Section-contact .boxForm form textarea {
   resize: none;
-  height: 7em;
+  height: 8em;
 }
 
 #Section-contact .boxForm form textarea::placeholder {
@@ -734,7 +735,7 @@ footer .copyright {
   #Section-about .boxInformation {
     height: 100%;
     width: 75%;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   #Section-about .boxPicture {
@@ -754,45 +755,80 @@ footer .copyright {
 
   #Section-contact .containerContact {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 1.5fr;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 0.6fr 0.7fr;
     grid-template-areas:
       "tit form"
       "desc form";
     place-items: center;
+    gap: 0;
     height: 85dvh;
+    box-sizing: border-box;
   }
 
-  #Section-contact .Div-tittle {
+  #Section-contact .boxTitle {
     grid-area: tit;
-  }
-
-  #Section-contact .boxForm {
-    grid-area: form;
-    align-self: self-end;
-    height: 70dvh;
-    box-sizing: content-box;
-  }
-
-  #Section-contact .boxForm form {
-    row-gap: 1em;
-  }
-
-  #Section-contact .boxForm form input {
-    height: 2.5em;
-  }
-
-  #Section-contact .boxForm form textarea {
-    resize: none;
-    height: 3.5em;
-  }
-
-  #Section-contact .boxForm form {
     height: 100%;
   }
 
   #Section-contact .boxDescription {
     grid-area: desc;
+    height: 100%;
+    justify-content: flex-start;
+    font-size: 1.3em;
+  }
+
+  #Section-contact .boxForm {
+    grid-area: form;
+    width: 90%;
+    height: 70dvh;
+    margin-top: 1em;
+    box-sizing: content-box;
+  }
+
+  #Section-contact .boxForm form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "name mail"
+      "ast ast"
+      "txtar txtar"
+      "btn btn";
+    height: 100%;
+    box-sizing: border-box;
+    place-items: center;
+  }
+
+  #Section-contact .boxForm form .contentInput:nth-child(1) {
+    grid-area: name;
+  }
+
+  #Section-contact .boxForm form .contentInput:nth-child(2) {
+    grid-area: mail;
+  }
+
+  #Section-contact .boxForm form .contentInput:nth-child(3) {
+    grid-area: ast;
+  }
+
+  #Section-contact .boxForm form .contentInput:nth-child(4) {
+    grid-area: txtar;
+  }
+
+  #Section-contact .boxForm form .btnLink {
+    grid-area: btn;
+    height: 3em;
+    transform: translateY(-0.5em);
+  }
+
+  #Section-contact .boxForm form input {
+    height: 2.3em;
+  }
+
+  #Section-contact .boxForm form textarea {
+    resize: none;
+    height: 4em;
   }
 }
 
