@@ -8,6 +8,12 @@
   <link rel="icon" href="./public/assets/logopng.png" />
   <link rel="stylesheet" href="style/generally_style.css" />
   <script src="scripts/generally_scripts.js" defer></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <!-- jQuery (primero) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- jQuery UI completo (incluye Effects) -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
 </head>
 
 <body>
@@ -33,10 +39,10 @@
     <!-- Sección de home para presentación general -->
     <section id="Section-home">
       <article class="containerHome">
-        <div class="boxImgHome">
+        <div class="boxImgHome JqLeft">
           <img src="./public/assets/pfl_pd1.JPG" alt="Logo" class="ImgHome" />
         </div>
-        <div class="boxDescription">
+        <div class="boxDescription JqRight">
           <div class="boxTextDescription">
             <h2>Rolando</h2>
             <h1>Murillo</h1>
@@ -83,14 +89,14 @@
             <a href="#Section-contact" class="btnLink">Contactame</a>
           </div>
         </div>
-        <div class="boxPicture">
+        <div class="boxPicture JqCuadrícula">
           <img src="./public/assets/pfl_pd2.JPG" alt="picture-Rolando" />
         </div>
       </article>
     </section>
 
     <!-- Sección de proyectos -->
-    <section id="projects">
+    <section id="projects" style="background-color: wheat;">
       <article class="container containerProjects">
         <h2>Hola Projects</h2>
       </article>
