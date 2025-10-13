@@ -43,6 +43,15 @@ li {
   width: clamp(2rem, 5vw, 60px);
 }
 
+.btnLink {
+  padding: 0.5em;
+  background-color: var(--mainColor);
+  width: clamp(100px, 45%, 300px);
+  font-size: 1.1em;
+  border-radius: 0.5em;
+  text-align: center;
+}
+
 figure {
   display: flex;
   justify-content: center;
@@ -64,6 +73,14 @@ figure {
 
 .iconMail {
   width: 10px;
+}
+
+.tittles-sections {
+  width: 100%;
+  font-family: var(--font1);
+  font-weight: 300;
+  font-size: 2em;
+  text-align: left;
 }
 
 .active {
@@ -236,7 +253,6 @@ main #home article h1 {
 
 main #home article p {
   font-family: var(--font1);
-  font-weight: 200;
   font-size: 2em;
   transform: translateY(-0.8em);
   text-shadow: 0px 5px 10px var(--mainColor);
@@ -250,12 +266,50 @@ main #home article .contentBtn {
   transform: translateY(-0.5em);
 }
 
-main #home article .contentBtn .btnLink {
-  padding: 0.5em;
-  background-color: var(--mainColor);
-  width: clamp(100px, 45%, 300px);
-  font-size: 1.1em;
-  border-radius: 0.5em;
+/*AJUSTES DE LA SECCIÓN SOBRE MI**/
+main #about {
+  width: 100%;
+  padding-top: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main #about section {
+  width: 95%;
+  box-sizing: content-box;
+}
+
+main #about .leftSectionAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
+main #about .informationAbout {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 0.3em;
+  padding: 0.2em;
+}
+
+main #about .informationAbout p {
+  font-size: 0.7em;
+}
+
+main #about .rightSectionAbout {
+  padding: 0.2em;
+  overflow: hidden;
+}
+
+main #about .rightSectionAbout img {
+  width: clamp(200px, 70%, 600px);
+  object-fit: cover;
 }
 
 /**AJUSTES DE FOOTER*/
@@ -340,6 +394,7 @@ footer #copy {
     box-shadow: var(--mainColor) 0px 2px 5px 0px;
   }
 
+  /*AJUSTES DE LA SECCIÓN INICIO**/
   main #home figure {
     position: relative;
     display: grid;
@@ -395,6 +450,13 @@ footer #copy {
     font-size: 1.5em;
   }
 
+  /*AJUSTES DE LA SECCIÓN SOBRE MI**/
+  main #about .informationAbout p {
+    width: 80%;
+    font-size: 1.2em;
+  }
+
+  /**AJUSTES DE FOOTER*/
   footer #information {
     font-size: 1em;
   }
@@ -410,6 +472,19 @@ footer #copy {
   .logo-socials {
     width: 60px;
     height: 60px;
+  }
+
+  .btnLink {
+    transition: all 0.5s ease-in-out;
+    width: clamp(200px, 30%, 400px);
+    transform-origin: right;
+    font-size: 1em;
+    padding: 0.5em;
+  }
+  .btnLink:hover {
+    transform: scale(1.1) translateY(-0.2em);
+    box-shadow: 0px 10px 3px var(--textColor);
+    background-color: var(--auxColor);
   }
 
   header {
@@ -496,10 +571,10 @@ footer #copy {
   main #home .socials .socialsContainer {
     flex-direction: column;
     display: flex;
-    width: 100%;
+
     align-items: flex-start;
     row-gap: 1em;
-    padding: 0.5em 1em 0.5em 0em;
+    padding: 0.5em 3em 0.5em 0em;
     border-radius: 0em 0.7em 0.7em 0em;
     background-color: var(--mainColor);
   }
@@ -548,6 +623,10 @@ footer #copy {
     font-size: 6.5em;
   }
 
+  main #home article p {
+    font-size: 2.5em;
+  }
+
   main #home article h1,
   main #home article h2,
   main #home article p {
@@ -560,17 +639,46 @@ footer #copy {
     column-gap: 2em;
   }
 
-  main #home article .contentBtn .btnLink {
-    transition: all 0.5s ease-in-out;
-    width: clamp(200px, 30%, 400px);
-    transform-origin: right;
-  }
-  main #home article .contentBtn .btnLink:hover {
-    transform: scale(1.1) translateY(-0.2em);
-    box-shadow: 0px 10px 3px var(--textColor);
-    background-color: var(--auxColor);
+  /**AJUSTES DE LA SECCIÓN SOBRE MI**/
+  main #about {
+    flex-direction: row;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 
+  main #about .leftSectionAbout {
+    width: 90%;
+    height: 80%;
+  }
+
+  main #about .leftSectionAbout .informationAbout {
+    height: 100%;
+  }
+
+  main #about .informationAbout {
+    row-gap: 0;
+  }
+
+  main #about .informationAbout p {
+    width: 95%;
+  }
+
+  main #about .informationAbout .btnLink {
+    padding: 0.7em;
+    font-size: 1.4em;
+  }
+
+  main #about .rightSectionAbout {
+    justify-content: flex-end;
+    width: 60%;
+  }
+
+  main #about .rightSectionAbout img {
+    width: clamp(200px, 65%, 600px);
+  }
+
+  /**AJUSTES DEL FOOTER**/
   footer {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 0.1fr;
