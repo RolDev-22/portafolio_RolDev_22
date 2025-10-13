@@ -1,6 +1,6 @@
 const btnMenu = document.getElementById("burgerMenu");
 const nav = document.querySelector("nav");
-const links = document.querySelectorAll("nav ul li a");
+const links = document.querySelectorAll(".links-nav");
 
 // Activa el menú al hacer clic
 links.forEach((link) => {
