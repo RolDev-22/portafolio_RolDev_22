@@ -88,6 +88,12 @@ figure {
   opacity: 1;
 }
 
+.activeInput {
+  transform: translateY(-2em);
+  color: var(--defaultColor);
+  user-select: none;
+}
+
 body {
   position: relative;
   display: flex;
@@ -312,6 +318,114 @@ main #about .rightSectionAbout img {
   object-fit: cover;
 }
 
+/**AJUSTES DE LA SECCION CONTACTO**/
+main #contact {
+  width: 100%;
+  padding-top: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6)),
+    url("/images/bg_contact.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main #contact section {
+  width: 95%;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main #contact .left {
+  display: none;
+}
+
+main #contact .right {
+  row-gap: 0.5em;
+}
+
+main #contact .right h2 {
+  display: none;
+}
+
+main #contact .right form {
+  width: 98%;
+  min-height: 70dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  font-family: var(--font1);
+  font-size: 1em;
+  border-radius: 0.5em;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px inset var(--textColor);
+
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.6));
+  backdrop-filter: blur(3px);
+}
+
+main #contact .right form .containerInput {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+}
+
+main #contact .right form .containerInput .inputControl:focus {
+  box-shadow: 0px 0px 5px 1px var(--mainColor);
+}
+
+main #contact .right form .containerInput label,
+main #contact .right form .containerInput input,
+main #contact .right form .containerInput textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  font-size: 0.8em;
+  font-family: var(--font1);
+  border-radius: 0.3em;
+  border: none;
+  transition: all 0.5s ease-in-out;
+}
+
+main #contact .right form .containerInput label {
+  width: 100%;
+  text-align: left;
+  position: absolute;
+  padding-left: 1em;
+  transition: all 0.5s ease-in-out;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+main #contact .right form .containerInput input {
+  height: 2em;
+  width: 100%;
+  outline: none;
+  color: var(--defaultColor);
+  padding-left: 0.5em;
+}
+
+main #contact .right form .containerInput textarea {
+  height: 7em;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+  color: var(--defaultColor);
+}
+
+main #contact .right form .contMessage label {
+  top: 1em;
+}
+
 /**AJUSTES DE FOOTER*/
 footer {
   display: grid;
@@ -394,6 +508,10 @@ footer #copy {
     box-shadow: var(--mainColor) 0px 2px 5px 0px;
   }
 
+  .activeInput {
+    transform: translateY(-3em);
+  }
+
   /*AJUSTES DE LA SECCIÓN INICIO**/
   main #home figure {
     position: relative;
@@ -454,6 +572,24 @@ footer #copy {
   main #about .informationAbout p {
     width: 80%;
     font-size: 1.2em;
+  }
+
+  /*AJUSTES DE LA SECCIÓN CONTACTO*/
+
+  main #contact .tittles-sections {
+    margin-top: 2em;
+  }
+
+  main #contact .right form .containerInput label {
+    font-size: 1em;
+  }
+
+  main #contact .right form .containerInput input {
+    height: 5em;
+  }
+
+  main #contact .right form .contMessage textarea {
+    height: 15em;
   }
 
   /**AJUSTES DE FOOTER*/
